@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-gold: #FFD700;
+    --brand-red: #E8112D;
+    --brand-cyan: #5CE1E6;
+    --brand-ink: #111827;
+    --bg-surface: #F8FAFC;
+    
+    /* Liquid Glass Level 1 */
+    --glass-1-bg: rgba(255, 255, 255, 0.18);
+    --glass-1-border: rgba(255, 255, 255, 0.45);
+    
+    /* Liquid Glass Level 2 */
+    --glass-2-bg: rgba(255, 255, 255, 0.32);
+    --glass-2-border: rgba(255, 255, 255, 0.65);
+    
+    /* Liquid Glass Level 3 */
+    --glass-3-bg: rgba(255, 255, 255, 0.52);
+    --glass-3-border: rgba(255, 255, 255, 0.85);
+
+    --card-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  .dark {
+    --bg-surface: #0A0D14;
+    
+    /* Liquid Smoked Glass Level 1 */
+    --glass-1-bg: rgba(15, 23, 42, 0.45);
+    --glass-1-border: rgba(255, 255, 255, 0.12);
+    
+    /* Liquid Smoked Glass Level 2 */
+    --glass-2-bg: rgba(17, 24, 39, 0.70);
+    --glass-2-border: rgba(255, 255, 255, 0.18);
+    
+    /* Liquid Smoked Glass Level 3 */
+    --glass-3-bg: rgba(24, 33, 53, 0.88);
+    --glass-3-border: rgba(255, 255, 255, 0.28);
+
+    --card-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  html {
+    scroll-behavior: auto !important; /* Lenis handles smooth scrolling */
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--bg-surface);
+    color: var(--brand-ink);
+    overflow-x: hidden;
+  }
+
+  .dark body {
+    color: #F8FAFC;
+  }
+
+  /* Custom Apple-style slim scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(150, 150, 150, 0.25);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 215, 0, 0.6);
+  }
+}
+
+@layer utilities {
+  /* Apple / visionOS Liquid Glass Utility Classes */
+  .glass-1 {
+    background: var(--glass-1-bg);
+    backdrop-filter: blur(16px) saturate(190%);
+    -webkit-backdrop-filter: blur(16px) saturate(190%);
+    border: 1px solid var(--glass-1-border);
+    box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.06);
+  }
+
+  .glass-2 {
+    background: var(--glass-2-bg);
+    backdrop-filter: blur(28px) saturate(200%);
+    -webkit-backdrop-filter: blur(28px) saturate(200%);
+    border: 1px solid var(--glass-2-border);
+    box-shadow: var(--card-shadow);
+  }
+
+  .glass-3 {
+    background: var(--glass-3-bg);
+    backdrop-filter: blur(38px) saturate(210%);
+    -webkit-backdrop-filter: blur(38px) saturate(210%);
+    border: 1px solid var(--glass-3-border);
+    box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+
+  /* Specular Highlight Sheen */
+  .specular-sheen {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .specular-sheen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Gold Ambient Glow */
+  .glow-gold {
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.35);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 35px rgba(92, 225, 230, 0.35);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 35px rgba(232, 17, 45, 0.35);
+  }
+
+  /* Text Gradients */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #5CE1E6 0%, #0099FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-red {
+    background: linear-gradient(135deg, #FF4D63 0%, #E8112D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  .glass-1, .glass-2, .glass-3 {
+    background: rgba(255, 255, 255, 0.92) !important;
+  }
+  .dark .glass-1, .dark .glass-2, .dark .glass-3 {
+    background: rgba(15, 23, 42, 0.95) !important;
+  }
+}
+
+/* Accessibility: Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+}
