@@ -1,57 +1,47 @@
 {
   "version": 1,
   "project": {
-    "name": "digitalmod-academy-3d-hamster",
-    "productType": null,
+    "name": "digitalmod-academy",
+    "productType": "Academy marketing website",
     "stack": [
-      "react",
-      "tailwind-v3",
-      "vite"
+      "HTML5",
+      "CSS custom properties",
+      "Vanilla JavaScript"
     ]
   },
   "sources": {
-    "tokens": [
-      "src/index.css"
-    ],
-    "components": [
-      "src/components/ui"
-    ],
+    "tokens": [],
+    "components": [],
     "assets": [],
     "instructions": []
   },
   "design": {
-    "colorMode": "light-and-dark",
+    "colorMode": "System / Light / Dark",
     "colors": {
-      "--glass-1-border": {
-        "value": "rgba(255, 255, 255, 0.12)",
-        "source": "src/index.css"
-      },
-      "--glass-2-border": {
-        "value": "rgba(255, 255, 255, 0.18)",
-        "source": "src/index.css"
-      },
-      "--glass-3-border": {
-        "value": "rgba(255, 255, 255, 0.28)",
-        "source": "src/index.css"
-      }
+      "background": "#15120b",
+      "surface": "#231e12",
+      "text": "#fff7df",
+      "muted": "#aaa08d",
+      "accent": "#ffd65a"
     },
-    "typography": {},
+    "typography": {
+      "body": "System sans-serif",
+      "display": "System sans-serif"
+    },
     "spacing": {},
     "radius": {},
-    "shadows": {
-      "--card-shadow": {
-        "value": "0 20px 50px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-        "source": "src/index.css"
-      }
+    "shadows": {},
+    "motion": {
+      "reducedMotion": "OS preference plus visitor toggle",
+      "parallax": "Full-screen sticky film, reversible scroll-controlled video frames and subtle zoom-out; normal playback at rest.",
+      "reveals": "IntersectionObserver resets on leave and replays on every entry",
+      "navigation": "View Transitions API with native fades and HTML page fallback",
+      "scrolling": "Native smooth anchors"
     },
-    "motion": {},
     "density": "unknown"
   },
   "components": {
-    "installed": [
-      "EnrollmentModal",
-      "Loader"
-    ],
+    "installed": [],
     "preferredPrimitives": [],
     "patterns": []
   },
@@ -59,32 +49,15 @@
     "must": [],
     "avoid": []
   },
-  "decisions": [],
-  "evidence": [
-    {
-      "fact": "components.installed",
-      "source": "src/components/ui"
-    },
-    {
-      "fact": "design.colorMode:light-and-dark",
-      "source": "src/index.css"
-    },
-    {
-      "fact": "design.tokens",
-      "source": "src/index.css"
-    },
-    {
-      "fact": "project.stack:react",
-      "source": "package.json"
-    },
-    {
-      "fact": "project.stack:tailwind-v3",
-      "source": "package.json"
-    },
-    {
-      "fact": "project.stack:vite",
-      "source": "package.json"
-    }
+  "decisions": [
+    "Warm yellow/gold, cream and charcoal glass surfaces.",
+    "Latest 30 proposed fully online courses and client-supplied telephone.",
+    "Plain static HTML, CSS and vanilla JavaScript, with no runtime packages or build step.",
+    "Session-only intro with skip and hard deadline; 9 reusable motion effects.",
+    "System/Light/Dark themes, proposed-course dialogs and review-before-WhatsApp enrolment.",
+    "Video hero, iPhone-inspired translucent glass, no public animation demo, and developer credit linking to +94 77 555 1712.",
+    "Full-screen cinematic video hero with gold serif accents, floating glass navigation, glass course-count link and a compact film/scroll dock. One MP4 uses short keyframe intervals and a cached Blob for reliable seeking on static hosts."
   ],
-  "generatedAt": "2026-10-10T06:58:56.168Z"
+  "evidence": [],
+  "generatedAt": "2026-10-14T04:48:59.547Z"
 }

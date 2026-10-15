@@ -4,7 +4,7 @@ These are the current production files. GitHub Pages publishes this folder from 
 
 ## Files
 
-- index.html: Home and the controllable video hero.
+- index.html: Home and the full-screen cinematic film hero.
 - about.html: Academy purpose and institutional information.
 - courses.html: All 30 proposed courses, filtering, search, sorting and details.
 - contact.html: Contact details, enrolment enquiry review and FAQs.
@@ -49,6 +49,6 @@ No SPA rewrite is required: each page is an actual HTML file. Check Home, About,
 
 ## Browser behaviour
 
-Supported browsers use View Transitions for shared elements and page changes; other browsers fall back gracefully. Video is muted, pauses off screen and respects reduced motion. Visitors can use its play/pause control. Native links work without JavaScript. The form uses WhatsApp after an explicit review and visitor action.
+Supported browsers use View Transitions for shared elements and page changes; other browsers fall back gracefully. The full-screen film plays muted at rest and seeks frames forward/backward while scrolling a sticky 185svh runway. A small MP4 is cached once in memory as a Blob so seeking works on static hosts without HTTP byte ranges. Reduced motion or Motion off removes the pinned runway and stops automatic playback. Video pauses off screen. Visitors can use its play/pause control. Native links work without JavaScript. The form uses WhatsApp after an explicit review and visitor action.
 
 Website developed by **A.J. Muhris** - [WhatsApp +94 77 555 1712](https://wa.me/94775551712).

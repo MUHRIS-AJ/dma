@@ -14,6 +14,12 @@
   --media-text: #fff9e9;
   --media-glass: rgb(16 13 7 / 72%);
   --media-rim: rgb(255 255 255 / 30%);
+  --film-bg: #080805;
+  --film-clear: rgb(8 8 5 / 0%);
+  --film-shade: rgb(8 8 5 / 90%);
+  --film-soft: rgb(255 249 233 / 72%);
+  --film-line: rgb(255 249 233 / 22%);
+  --film-sheen: rgb(255 249 233 / 10%);
   --text: #241c0c;
   --muted: #675f4d;
   --accent: #ffd65a;
@@ -225,74 +231,6 @@ h2 > span {
   box-shadow: inset 0 1px 0 var(--glass-rim);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   backdrop-filter: blur(20px) saturate(180%);
-}
-.hero-video-frame {
-  position: relative;
-  isolation: isolate;
-  border-radius: 36px;
-  padding: 12px;
-  overflow: hidden;
-}
-.hero-video {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border-radius: 25px;
-  object-fit: cover;
-  background: var(--media-glass);
-}
-.hero-video-label,
-.hero-video-toggle {
-  position: absolute;
-  color: var(--media-text);
-  background: var(--media-glass);
-  border: 1px solid var(--media-rim);
-  box-shadow: inset 0 1px 0 var(--media-rim);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
-  backdrop-filter: blur(20px) saturate(160%);
-  border-radius: 100px;
-}
-.hero-video-label {
-  top: 26px;
-  left: 26px;
-  max-width: calc(100% - 52px);
-  padding: 8px 12px;
-  font-size: 0.52rem;
-  font-weight: 600;
-  letter-spacing: 0.09em;
-}
-.hero-video-label span {
-  margin-left: 8px;
-}
-.hero-video-toggle {
-  right: 25px;
-  bottom: 84px;
-  min-height: 44px;
-  padding: 12px 16px;
-  font-size: 0.72rem;
-}
-.hero-video-toggle:hover {
-  background: var(--backdrop);
-}
-.hero-video-toggle:focus-visible {
-  outline-color: var(--accent);
-}
-.hero-video-caption {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  min-height: 62px;
-  padding: 14px 10px 5px;
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-}
-.hero-video-caption small {
-  font-size: 0.59rem;
-  color: var(--muted);
-  letter-spacing: 0;
-  font-weight: 400;
 }
 .developer-credit {
   border-top: 1px solid var(--line);
@@ -723,6 +661,449 @@ h2 > span {
 }
 .hero-bottom a {
   white-space: nowrap;
+}
+/* CINEMATIC HERO. --scene-* is updated once per scroll frame in main.js.
+   The film stays dark in both themes so the white overlay remains readable. */
+.cinematic-hero {
+  position: relative;
+  height: 185svh;
+  background: var(--film-bg);
+  color: var(--media-text);
+  --scene-inset: 0px;
+  --scene-radius: 0px;
+  --scene-scale: 1.035;
+  --scene-copy-y: 0px;
+  --scene-progress: 0;
+}
+.hero-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 660px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--film-bg);
+}
+.hero-media {
+  position: absolute;
+  inset: var(--scene-inset);
+  overflow: hidden;
+  border-radius: var(--scene-radius);
+  background: var(--film-bg);
+}
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 13%;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(var(--scene-scale));
+  -webkit-mask-image: linear-gradient(90deg, var(--film-clear), var(--film-bg) 12%);
+  mask-image: linear-gradient(90deg, var(--film-clear), var(--film-bg) 12%);
+}
+.hero-veil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(0deg, var(--film-shade), var(--film-clear) 34%),
+    linear-gradient(90deg, var(--film-shade) 2%, var(--film-shade) 18%, var(--film-clear) 76%),
+    linear-gradient(180deg, var(--media-glass), var(--film-clear) 27%);
+}
+.hero-topline,
+.hero-content,
+.hero-dock {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.hero-topline {
+  top: 124px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  color: var(--film-soft);
+}
+.hero-topline > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-topline i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 15px var(--accent);
+}
+.hero-content {
+  bottom: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  transform: translateY(var(--scene-copy-y));
+}
+.cinematic-hero .hero-copy {
+  width: min(760px, 70%);
+}
+.hero-kicker {
+  margin-bottom: 24px;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.19em;
+  color: var(--film-soft);
+}
+.cinematic-hero .page-title {
+  font-size: clamp(3.6rem, 6.5vw, 7rem);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.cinematic-hero .page-title em {
+  display: block;
+  color: var(--accent);
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  letter-spacing: -0.055em;
+}
+.cinematic-hero .hero-description {
+  color: var(--film-soft);
+  font-size: 0.87rem;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+.cinematic-hero .button {
+  min-height: 52px;
+  padding-inline: 24px;
+  gap: 38px;
+}
+.hero-enrol-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 48px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid var(--film-line);
+}
+.hero-enrol-link:hover {
+  color: var(--accent);
+}
+.hero-pathways {
+  display: grid;
+  gap: 4px;
+  flex-shrink: 0;
+  padding: 22px 24px;
+  width: 245px;
+  border: 1px solid var(--media-rim);
+  border-radius: 24px;
+  background: linear-gradient(130deg, var(--film-sheen), var(--film-clear)), var(--media-glass);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  backdrop-filter: blur(28px) saturate(160%);
+  box-shadow: inset 0 1px 0 var(--media-rim);
+  font-size: 0.8rem;
+  transition: border-color 200ms, transform 200ms;
+}
+.hero-pathways:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+.hero-pathway-number {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  font-size: 3.4rem;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+.hero-pathway-number > span {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+.hero-pathways small {
+  color: var(--film-soft);
+  font-size: 0.59rem;
+}
+.hero-dock {
+  bottom: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid var(--film-line);
+  padding-top: 22px;
+}
+.hero-film-caption {
+  font-size: 0.56rem;
+  letter-spacing: 0.16em;
+}
+.hero-film-caption small {
+  display: block;
+  color: var(--film-soft);
+  font-size: 0.56rem;
+  letter-spacing: 0;
+  margin-top: 5px;
+}
+.hero-scroll-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+  font-size: 0.55rem;
+  letter-spacing: 0.13em;
+}
+.hero-scroll-icon {
+  width: 34px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--film-line);
+  border-radius: 50px;
+  font-size: 1rem;
+}
+.hero-video-toggle {
+  min-width: 124px;
+  min-height: 44px;
+  padding: 11px 16px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  color: var(--media-text);
+  background: var(--media-glass);
+  border: 1px solid var(--media-rim);
+  border-radius: 50px;
+  box-shadow: inset 0 1px 0 var(--media-rim);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+}
+.hero-video-toggle:hover {
+  border-color: var(--accent);
+}
+.cinematic-hero :focus-visible,
+.site-header.is-home :focus-visible {
+  outline-color: var(--accent);
+}
+.hero-frame-track {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  height: 2px;
+  background: var(--film-line);
+}
+.hero-frame-track > span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left;
+  transform: scaleX(var(--scene-progress));
+}
+/* This class also follows Home when navigating without a full reload. */
+.site-header.is-home {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  translate: -50% 0;
+  width: min(1320px, calc(100% - 40px));
+  color: var(--media-text);
+  border: 1px solid var(--media-rim);
+  border-radius: 24px;
+  background: var(--media-glass);
+  box-shadow: inset 0 1px 0 var(--media-rim);
+  -webkit-backdrop-filter: blur(26px) saturate(160%);
+  backdrop-filter: blur(26px) saturate(160%);
+}
+.site-header.is-home .nav-row {
+  min-height: 70px;
+  width: calc(100% - 32px);
+}
+.site-header.is-home .main-nav a[aria-current],
+.site-header.is-home .main-nav a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.site-header.is-home .theme-control,
+.site-header.is-home .menu-toggle {
+  border-color: var(--media-rim);
+  background: var(--glass-clear);
+}
+.site-header.is-home .theme-control select {
+  color: var(--media-text);
+}
+.site-header.is-home .main-nav {
+  top: calc(100% + 10px);
+  color: var(--media-text);
+  border-radius: 20px;
+  border: 1px solid var(--media-rim);
+  background: var(--media-glass);
+  -webkit-backdrop-filter: blur(26px);
+  backdrop-filter: blur(26px);
+}
+.cinematic-hero + .skills-ribbon {
+  margin-top: 0;
+}
+@media (min-width: 960px) {
+  .site-header.is-home .main-nav {
+    color: var(--media-text);
+    border: 0;
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+@media (max-width: 959px) {
+  .cinematic-hero .hero-copy {
+    width: min(620px, 78%);
+  }
+  .hero-pathways {
+    display: none;
+  }
+  .hero-video {
+    left: 10%;
+  }
+}
+/* Keep the two small labels apart on shorter laptop screens. */
+@media (min-width: 600px) and (max-height: 780px) {
+  .hero-topline {
+    display: none;
+  }
+  .hero-content {
+    bottom: 126px;
+  }
+}
+@media (max-width: 599px) {
+  .site-header.is-home {
+    top: 12px;
+    width: calc(100% - 24px);
+    border-radius: 20px;
+  }
+  .site-header.is-home .nav-row {
+    min-height: 64px;
+    width: calc(100% - 24px);
+    gap: 10px;
+  }
+  .hero-stage {
+    min-height: 690px;
+  }
+  .hero-topline {
+    top: 104px;
+    font-size: 0.52rem;
+  }
+  .hero-topline > span:last-child {
+    display: none;
+  }
+  .hero-topline > span:first-child {
+    width: fit-content;
+    padding: 7px 10px;
+    border: 1px solid var(--film-line);
+    border-radius: 50px;
+    background: var(--media-glass);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+  .hero-video {
+    top: 7%;
+    left: -45%;
+    width: 190%;
+    height: 58%;
+    object-fit: contain;
+    -webkit-mask-image: linear-gradient(180deg, var(--film-clear), var(--film-bg) 12%, var(--film-bg) 78%, var(--film-clear));
+    mask-image: linear-gradient(180deg, var(--film-clear), var(--film-bg) 12%, var(--film-bg) 78%, var(--film-clear));
+  }
+  .hero-veil {
+    background: linear-gradient(0deg, var(--film-bg) 2%, var(--film-shade) 22%, var(--film-clear) 64%);
+  }
+  .hero-content {
+    bottom: 125px;
+  }
+  .cinematic-hero .hero-copy {
+    width: 100%;
+  }
+  .hero-kicker {
+    margin-bottom: 15px;
+    font-size: 0.52rem;
+    letter-spacing: 0.13em;
+  }
+  .cinematic-hero .page-title {
+    font-size: clamp(2.75rem, 11.5vw, 4rem);
+    margin-bottom: 18px;
+  }
+  .cinematic-hero .hero-description {
+    font-size: 0.76rem;
+    margin-bottom: 20px;
+  }
+  .cinematic-hero .hero-buttons {
+    gap: 22px;
+  }
+  .cinematic-hero .button {
+    min-height: 48px;
+    padding-inline: 18px;
+    gap: 22px;
+    font-size: 0.77rem;
+  }
+  .hero-enrol-link {
+    font-size: 0.74rem;
+  }
+  .hero-dock {
+    bottom: 20px;
+    gap: 15px;
+    padding-top: 16px;
+  }
+  .hero-film-caption {
+    display: none;
+  }
+  .hero-scroll-link {
+    font-size: 0.48rem;
+    gap: 10px;
+  }
+  .hero-scroll-link > span:last-child {
+    max-width: 120px;
+  }
+  .hero-video-toggle {
+    min-width: 112px;
+    font-size: 0.65rem;
+  }
+}
+/* Static first screen for reduced motion, manual motion-off and no JavaScript. */
+html[data-motion="off"] .cinematic-hero,
+html:not(.js) .cinematic-hero {
+  height: auto;
+}
+html[data-motion="off"] .hero-stage,
+html:not(.js) .hero-stage {
+  position: relative;
+}
+html[data-motion="off"] .hero-media,
+html:not(.js) .hero-media {
+  inset: 0;
+  border-radius: 0;
+}
+html[data-motion="off"] .hero-video,
+html:not(.js) .hero-video,
+html[data-motion="off"] .hero-content {
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-hero {
+    height: auto;
+  }
+  .hero-stage {
+    position: relative;
+  }
+  .hero-media {
+    inset: 0;
+    border-radius: 0;
+  }
+  .hero-video,
+  .hero-content {
+    transform: none;
+  }
 }
 .skills-ribbon {
   overflow: hidden;

@@ -1,6 +1,6 @@
 # Digitalmod Academy
 
-The current Digitalmod Academy website is a responsive static website written in plain HTML, CSS and vanilla JavaScript. It includes a gold glass interface, a video hero, 30 proposed online certificate courses, a WhatsApp enrolment enquiry form, light/dark/system themes, replayable scroll motion and a custom 404 page.
+The current Digitalmod Academy website is a responsive static website written in plain HTML, CSS and vanilla JavaScript. It includes a gold glass interface, a full-screen cinematic video hero with reversible scroll-controlled frames, 30 proposed online certificate courses, a WhatsApp enrolment enquiry form, light/dark/system themes, replayable scroll motion and a custom 404 page.
 
 - **Website:** [muhris-aj.github.io/dma](https://muhris-aj.github.io/dma/)
 - **Published files and editing guide:** [docs/](docs/README.md)
