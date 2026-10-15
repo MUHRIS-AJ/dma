@@ -605,28 +605,30 @@
         !manuallyPaused &&
         (motionAllowed() || explicitlyPlaying)
       ) {
-        if (!filmPrepared) {
-          prepareFilm();
-          return;
-        }
         if (scrubbing && motionAllowed() && canSeek()) {
           video.pause();
           seekFrame();
-        } else if (video.paused) {
-          video.play().catch(updateButton);
+        } else {
+          // Stream immediately on normal hosts. Only fetch the whole film when
+          // decoded metadata proves that this host cannot seek byte ranges.
+          if (scrubbing && !filmPrepared && video.readyState >= 2) prepareFilm();
+          if (video.paused) video.play().catch(updateButton);
         }
       } else video.pause();
       updateButton();
     };
-    // Loading the small film once as a Blob makes frame seeking work even on
-    // static hosts that do not implement HTTP byte-range responses. Until ready,
-    // the poster stays visible. A failed fetch falls back to normal video loading.
+    // Blob fallback for static hosts without byte ranges. Normal hosts stream
+    // natively. A stalled fallback never blocks playback or the visitor's controls.
     const prepareFilm = async () => {
       if (preparingFilm || signal.aborted) return;
       preparingFilm = true;
+      const download = new AbortController();
+      const cancelDownload = () => download.abort();
+      signal.addEventListener("abort", cancelDownload, { once: true });
+      const deadline = setTimeout(cancelDownload, 12000);
       try {
         if (!heroFilmAsset) {
-          const response = await fetch($("source", video).src, { signal });
+          const response = await fetch($("source", video).src, { signal: download.signal });
           if (!response.ok) throw new Error("Film unavailable");
           heroFilmAsset = await response.blob();
         }
@@ -636,6 +638,9 @@
         video.load();
       } catch {
         if (signal.aborted) return;
+      } finally {
+        clearTimeout(deadline);
+        signal.removeEventListener("abort", cancelDownload);
       }
       filmPrepared = true;
       updatePlayback();
