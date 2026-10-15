@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://muhris-aj.github.io/dma/sitemap.xml

@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#15120b" />
+    <meta
+      name="description"
+      content="Explore Digitalmod Academy’s proposed online certificate courses in IT, languages, design, business, HR and psychology."
+    />
+
+    <title>Learn Skills. Build Your Future. | Digitalmod Academy</title>
+    <!-- Change the absolute domain below when deploying to your own host. -->
+    <link
+      rel="canonical"
+      href="https://muhris-aj.github.io/dma/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Digitalmod Academy" />
+    <meta
+      property="og:title"
+      content="Learn Skills. Build Your Future. | Digitalmod Academy"
+    />
+    <meta
+      property="og:description"
+      content="Explore Digitalmod Academy’s proposed online certificate courses in IT, languages, design, business, HR and psychology."
+    />
+    <meta
+      property="og:url"
+      content="https://muhris-aj.github.io/dma/"
+    />
+    <meta
+      property="og:image"
+      content="https://muhris-aj.github.io/dma/assets/brand-poster.webp"
+    />
+    <meta property="og:image:alt" content="Digitalmod Academy crest" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Set the theme BEFORE CSS paints. Change the dma-theme key only if needed. -->
+    <script>
+      (function () {
+        var r = document.documentElement;
+        r.classList.add("js");
+        try {
+          r.dataset.motion =
+            localStorage.getItem("dma-motion") === "off" ? "off" : "on";
+        } catch (e) {}
+        try {
+          var c = localStorage.getItem("dma-theme") || "system";
+          if (!["system", "light", "dark"].includes(c)) c = "system";
+          r.dataset.themeChoice = c;
+          r.dataset.theme =
+            c === "system"
+              ? matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : c;
+        } catch (e) {
+          r.dataset.themeChoice = "system";
+          r.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        try {
+          if (
+            r.dataset.motion !== "off" &&
+            !sessionStorage.getItem("dma-intro") &&
+            !matchMedia("(prefers-reduced-motion: reduce)").matches
+          ) {
+            r.classList.add("intro-pending");
+            r.dataset.introStarted = performance.now();
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" href="/dma/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/dma/css/style.css" />
+    <link rel="stylesheet" href="/dma/css/animations.css" />
+    <script src="/dma/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Intro failsafe in CSS hides this even if JavaScript cannot finish. -->
+    <div class="intro" data-loader aria-label="Digitalmod Academy introduction">
+      <div class="intro-flash" aria-hidden="true"></div>
+      <div class="intro-content">
+        <img
+          class="intro-logo grow-turn is-in"
+          src="/dma/assets/logo.webp"
+          alt="Digitalmod Academy crest"
+          width="144"
+          height="150"
+        />
+        <p class="intro-name">digitalmod<span>ACADEMY</span></p>
+        <p class="intro-tagline">Your next chapter starts here.</p>
+        <div class="intro-progress" aria-hidden="true"><span></span></div>
+      </div>
+      <button class="intro-skip" type="button" data-skip-intro>
+        Skip introduction <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a
+          class="brand"
+          href="/dma/index.html"
+          data-page
+          aria-label="Digitalmod Academy home"
+        >
+          <img
+            class="brand-logo"
+            src="/dma/assets/logo.webp"
+            alt=""
+            width="42"
+            height="44"
+          />
+          <span>digitalmod<small>ACADEMY</small></span>
+        </a>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="/dma/index.html" data-page aria-current="page">Home</a>
+          <a href="/dma/about.html" data-page>About</a>
+          <a href="/dma/courses.html" data-page>Courses</a>
+          <a href="/dma/contact.html" data-page>Contact</a>
+        </nav>
+        <div class="nav-tools">
+          <label class="theme-control"
+            ><span class="sr-only">Colour theme</span
+            ><span aria-hidden="true">◐</span>
+            <select data-theme-picker aria-label="Colour theme">
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+          <a
+            class="button button-small"
+            href="/dma/contact.html#enrolment"
+            data-page
+            >Enrol now <span aria-hidden="true">↗</span></a
+          >
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Open menu"
+            data-menu-toggle
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" data-page-name="index">
+      <section class="hero section">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <div class="eyebrow fly-up" data-animate>
+              <span class="status-dot"></span> YOUR FUTURE STARTS WITH A SKILL
+            </div>
+            <h1 class="page-title fly-up" data-animate style="--delay: 80ms">
+              Learn skills.<br />Build your<br /><span>future.</span
+              ><span class="title-star" aria-hidden="true">✦</span>
+            </h1>
+            <p
+              class="hero-description fade"
+              data-animate
+              style="--delay: 140ms"
+            >
+              Big ambitions. Real-world skills.<br />Find your next step with
+              Digitalmod Academy’s proposed online certificate courses.
+            </p>
+            <div
+              class="hero-buttons fly-up"
+              data-animate
+              style="--delay: 200ms"
+            >
+              <a class="button" href="/dma/courses.html" data-page
+                >Find your course <span aria-hidden="true">↗</span></a
+              ><a class="text-link" href="/dma/contact.html#enrolment" data-page
+                >Enrol now <span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <p class="hero-footnote">
+              ◎ Rooted in Sri Lanka. Open to your ambitions.
+            </p>
+          </div>
+          <!-- Muted brand video replaces the decorative hero effects.
+               main.js pauses it off screen and honours reduced motion. -->
+          <div class="hero-visual appear" data-animate>
+            <div class="hero-video-frame glass">
+              <video
+                class="hero-video"
+                data-hero-video
+                muted
+                loop
+                playsinline
+                controls
+                preload="none"
+                poster="/dma/assets/brand-poster.webp"
+                aria-label="Digitalmod Academy illustrative brand animation"
+              >
+                <source src="/dma/assets/brand-reveal.mp4" type="video/mp4" />
+                Your browser does not support this video.
+              </video>
+              <span class="hero-video-label"
+                >THE NEXT CHAPTER IS YOURS
+                <span aria-hidden="true">✦</span></span
+              >
+              <div class="hero-video-caption">
+                <span>LEARN. CREATE. GROW.</span
+                ><small>Illustrative brand video</small>
+              </div>
+              <button
+                class="hero-video-toggle"
+                type="button"
+                data-hero-video-toggle
+                aria-label="Play hero video"
+                hidden
+              >
+                <span aria-hidden="true">▷</span> Play video
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="container hero-bottom">
+          <span>30 COURSES. 6 PATHWAYS. ONE NEXT STEP.</span
+          ><a href="#featured">SCROLL TO EXPLORE ↓</a>
+        </div>
+      </section>
+      <div class="skills-ribbon" aria-hidden="true">
+        <div>
+          <span
+            >CREATE YOUR FUTURE ✦ LEARN SOMETHING NEW ✦ MAKE YOUR NEXT MOVE
+            ✦</span
+          ><span
+            >CREATE YOUR FUTURE ✦ LEARN SOMETHING NEW ✦ MAKE YOUR NEXT MOVE
+            ✦</span
+          ><span
+            >CREATE YOUR FUTURE ✦ LEARN SOMETHING NEW ✦ MAKE YOUR NEXT MOVE
+            ✦</span
+          ><span
+            >CREATE YOUR FUTURE ✦ LEARN SOMETHING NEW ✦ MAKE YOUR NEXT MOVE
+            ✦</span
+          >
+        </div>
+      </div>
+      <section class="section" id="featured">
+        <div class="container">
+          <div class="section-heading">
+            <div class="fly-up" data-animate>
+              <div class="eyebrow">01 / FIND YOUR DIRECTION</div>
+              <h2>Small steps.<br /><span>Big possibilities.</span></h2>
+            </div>
+            <p class="fade" data-animate>
+              Technology, languages, creativity and more.<br />Start with a
+              subject that feels like you.
+            </p>
+          </div>
+          <div class="course-grid stagger" data-stagger="80">
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="ict"
+              data-title="Professional Certificate in ICT"
+              data-category="it"
+              data-duration="3"
+              data-fee="4000"
+              style="--i: 0"
+            >
+              <div class="course-art art-it" aria-hidden="true">
+                <span class="course-category">Computer &amp; IT</span
+                ><span class="course-glyph">&lt;/&gt;</span
+                ><span class="course-art-glass">&lt;/&gt;</span
+                ><span class="course-orbit"></span><small>18</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">PROFESSIONAL CERTIFICATE</span>
+                <h3>ICT</h3>
+                <p class="course-description">
+                  Build your digital confidence and explore the essentials of
+                  information technology.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 4,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=ict#enrolment"
+                    data-course-open
+                    aria-label="View Professional Certificate in ICT"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="graphic-design"
+              data-title="Certificate in Graphic Design"
+              data-category="design"
+              data-duration="3"
+              data-fee="4000"
+              style="--i: 1"
+            >
+              <div class="course-art art-design" aria-hidden="true">
+                <span class="course-category">Design &amp; Media</span
+                ><span class="course-glyph">✳</span
+                ><span class="course-art-glass">✳</span
+                ><span class="course-orbit"></span><small>23</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Graphic Design</h3>
+                <p class="course-description">
+                  Turn your creative curiosity into a new perspective on visual
+                  communication.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 4,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=graphic-design#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Graphic Design"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="english-language"
+              data-title="Certificate in English Language"
+              data-category="language"
+              data-duration="3"
+              data-fee="4000"
+              style="--i: 2"
+            >
+              <div class="course-art art-language" aria-hidden="true">
+                <span class="course-category">Languages</span
+                ><span class="course-glyph">Aa</span
+                ><span class="course-art-glass">Aa</span
+                ><span class="course-orbit"></span><small>01</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>English Language</h3>
+                <p class="course-description">
+                  Build confidence in everyday English and discover more ways to
+                  express yourself.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 4,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=english-language#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in English Language"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="center">
+            <a class="button button-outline" href="/dma/courses.html" data-page
+              >Explore all 30 courses <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <p class="planning-note">
+            <strong>A little clarity before you begin.</strong> Durations and
+            fees are proposed for planning. Confirm the curriculum, delivery
+            arrangements and certificate recognition with the academy before
+            enrolling.
+          </p>
+        </div>
+      </section>
+      <section class="section why-section">
+        <div class="container">
+          <div class="section-heading">
+            <div class="fly-up" data-animate>
+              <div class="eyebrow">02 / BUILT AROUND YOUR AMBITIONS</div>
+              <h2>
+                Your life. Your pace.<br /><span>Your next chapter.</span>
+              </h2>
+            </div>
+            <p>
+              Bring your curiosity.<br />Let’s turn it into something you can
+              use.
+            </p>
+          </div>
+          <div class="feature-grid stagger" data-stagger="90">
+            <article
+              class="feature-card glass fly-up"
+              data-animate
+              data-direction="left"
+            >
+              <span class="feature-symbol" aria-hidden="true">◎</span>
+              <h3>Make anywhere<br />your classroom.</h3>
+              <p>
+                A proposed fully online range. Explore a learning pathway
+                wherever you’re based.
+              </p>
+            </article>
+            <article class="feature-card glass grow-turn" data-animate>
+              <span class="feature-symbol" aria-hidden="true">◈</span>
+              <h3>Less “one day”.<br />More “day one”.</h3>
+              <p>
+                Build a foundation in a skill you’ve always wanted to explore.
+              </p>
+            </article>
+            <article
+              class="feature-card glass fly-up"
+              data-animate
+              data-direction="right"
+            >
+              <span class="feature-symbol" aria-hidden="true">✦</span>
+              <h3>Find your kind<br />of possibility.</h3>
+              <p>
+                Six pathways and 30 proposed courses. A new direction starts
+                with a small step.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container cta-panel glass fly-up" data-animate>
+          <div>
+            <div class="eyebrow">YOUR NEXT STEP STARTS HERE</div>
+            <h2>Big future.<br /><span>Small first step.</span></h2>
+            <p>Tell us what you want to learn.</p>
+          </div>
+          <a class="button" href="/dma/contact.html#enrolment" data-page
+            >Start your enrolment request <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <a class="brand footer-brand" href="/dma/index.html" data-page
+            ><img src="/dma/assets/logo.webp" alt="" width="42" height="44" /><span
+              >digitalmod<small>ACADEMY</small></span
+            ></a
+          >
+          <p>Learn Skills. Build Your Future.</p>
+          <small>Polonnaruwa, Sri Lanka</small>
+        </div>
+        <div class="footer-links">
+          <span>YOUR NEXT CHAPTER</span
+          ><a href="/dma/about.html" data-page>About the academy</a
+          ><a href="/dma/courses.html" data-page>Explore courses</a
+          ><a href="/dma/contact.html#enrolment" data-page>Enrolment form</a
+          ><a href="/dma/contact.html" data-page>Contact us</a>
+        </div>
+        <div class="footer-statement">
+          <span>STAY CURIOUS.</span>
+          <p>
+            There’s always<br />something new<br /><strong>to learn.</strong>
+            <span aria-hidden="true">↗</span>
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year>2026</span> Digitalmod Academy (Pvt) Ltd</span>
+        <div>
+          <button type="button" data-open-privacy>Privacy & terms</button
+          ><button type="button" data-motion-toggle aria-pressed="true">
+            Motion on</button
+          ><a href="#main">Back to top ↑</a>
+        </div>
+      </div>
+      <div class="container developer-credit">
+        <p>
+          Website developed by
+          <a
+            href="https://wa.me/94775551712"
+            target="_blank"
+            rel="noopener noreferrer"
+            >A.J. Muhris <span>+94 77 555 1712</span>
+            <span aria-hidden="true">↗</span></a
+          >
+        </p>
+      </div>
+    </footer>
+    <dialog
+      class="detail-dialog"
+      data-course-dialog
+      aria-labelledby="detail-title"
+    >
+      <div class="detail-panel" data-detail-panel>
+        <button
+          class="dialog-close"
+          data-close-course
+          type="button"
+          aria-label="Close course details"
+        >
+          ×
+        </button>
+        <div class="eyebrow" data-detail-category></div>
+        <h2 id="detail-title" tabindex="-1"></h2>
+        <p data-detail-description></p>
+        <div class="detail-meta" data-detail-meta></div>
+        <p class="small-note">
+          Confirm availability, curriculum, final fees and certificate
+          recognition before enrolling.
+        </p>
+        <a
+          class="button"
+          data-detail-enrol
+          href="/dma/contact.html#enrolment"
+          data-page
+          >Enrolment request <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </dialog>
+    <dialog
+      class="policy-dialog"
+      data-privacy-dialog
+      aria-labelledby="policy-title"
+    >
+      <button
+        class="dialog-close"
+        data-close-privacy
+        type="button"
+        aria-label="Close privacy terms"
+      >
+        ×
+      </button>
+      <div class="eyebrow">PRIVACY & ENROLMENT TERMS</div>
+      <h2 id="policy-title">Your details, clearly handled.</h2>
+      <p>
+        Forms prepare a message for WhatsApp. Your details are kept only in the
+        current page and are not submitted to an academy database. You review
+        the message and choose whether to send it in WhatsApp, where WhatsApp’s
+        privacy terms apply.
+      </p>
+      <p>
+        Only your theme and motion preferences are saved in localStorage. The
+        intro’s session flag uses sessionStorage. No payment is collected here.
+        Confirm course availability, final fees, recognition and refund terms
+        directly with the academy before enrolling.
+      </p>
+      <button type="button" class="button" data-close-privacy>Got it ✓</button>
+    </dialog>
+    <div
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+      data-route-status
+    ></div>
+  </body>
+</html>

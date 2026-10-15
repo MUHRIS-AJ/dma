@@ -1,73 +1,26 @@
-# 🌟 DIGITAL MOD ACADEMY — APPLE LIQUID GLASS & 3D MASCOT WEB EXPERIENCE
+# Digitalmod Academy
 
-> **Apple-style, visionOS / iOS "liquid glass" premium website featuring scroll-driven 3D mascot frame scrubbing, high-definition video backgrounds, and interactive 3D WebGL micro-interactions.**  
-> Built for **Digital MOD Academy**, Polonnaruwa, Sri Lanka.
+The current Digitalmod Academy website is a responsive static website written in plain HTML, CSS and vanilla JavaScript. It includes a gold glass interface, a video hero, 30 proposed online certificate courses, a WhatsApp enrolment enquiry form, light/dark/system themes, replayable scroll motion and a custom 404 page.
 
----
+- **Website:** [muhris-aj.github.io/dma](https://muhris-aj.github.io/dma/)
+- **Published files and editing guide:** [docs/](docs/README.md)
 
-## 🎨 Visual Identity & Brand System (Extracted from Official Logo)
+## Publish
 
-- **Official Logo:** `/public/logo.png` (Gold laurel wreath, graduation cap on a red pen nib, cyan open book, three red stars, yellow ribbon).
-- **Brand Colors:**
-  - **Gold (`#FFD700`):** Laurel wreath, ribbon, badges, primary button accents.
-  - **Red (`#E8112D`):** Pen nib, three stars, notification tags, accent details.
-  - **Cyan (`#5CE1E6`):** Open book pages, glowing edges, tech accents.
-  - **Ink (`#111827`):** Primary high-contrast text.
-  - **Liquid Glass:** Frosted white / slate in light mode; smoked deep glass in dark mode.
+GitHub Pages serves the docs folder on the main branch. No build or package installation is needed. Changes publish automatically after pushing to main.
 
----
+In repository **Settings > Pages**, use **Deploy from a branch**, **main**, **/docs**. The included .nojekyll file makes Pages serve the finished files directly.
 
-## 🚀 Core Features & Technical Highlights
+## Preview locally
 
-1. **Apple-Style ScrollCanvas Frame Scrubbing:**
-   - 50 pre-rendered 3D frames extracted from `C:\Users\muhri\Downloads\DMA\VIDEO` scrubbed smoothly with **GSAP ScrollTrigger** and **Lenis smooth scrolling** (`scrub: 1.2`).
-   - Seamless fallback to high-definition looping MP4 (`/public/videos/hero_background.mp4`) and logo reveal intro (`/public/videos/logo_reveal.mp4`).
-2. **Liquid Glass Design System (iOS / visionOS):**
-   - 3 glass levels (`glass-1`, `glass-2`, `glass-3`) with backdrop blur, specular top-edge sheen, dynamic mouse-following glare reflection, and 3D card tilt.
-   - Animated fluid background gradient mesh with slow-moving blurred Gaussian orbs in Gold, Cyan, and Red.
-3. **Interactive 3D Hamster Mascot ("Moddy"):**
-   - Real-time Three.js / React Three Fiber layer featuring 6 rich animation clips (`idle`, `wave`, `run`, `eating`, `jump`, `sleep`), glossy expressive eyes with natural blinking, cursor look-at tracking, and instanced 3D particle bursts on click!
-4. **Zero-Asset Web Audio API Synthesizer:**
-   - Procedural audio synthesizer generating cute hamster squeaks, hops, nibbling crunches, and celebratory chimes without external MP3 network lag.
-5. **Complete 10-Section Architecture:**
-   - **Hero:** Real logo, looping video background, headline, pill CTAs, liquid glass stat chips.
-   - **Courses:** Segmented control filter (All / Beginner / Advanced / Online) + squircle app-icon cards.
-   - **Why Us:** Apple-style bento grid featuring Polonnaruwa smart campus (112 Sungavila) and Universal Bureau of Education (UBE) recognition.
-   - **Learning Journey:** Interactive 5-stage scroll timeline with glowing pipeline.
-   - **Instructors:** Glass profile cards featuring founder **Mohomed Suhith (B.ICT Hons)** and senior mentors.
-   - **Testimonials:** iOS notification-style stacked cards.
-   - **Pricing:** 3 glass plans with gold glow featured card.
-   - **FAQ:** iOS Settings-style frosted glass accordion.
-   - **CTA & Registration:** Glass form with floating labels, real-time validation, and confetti celebration.
-   - **Footer:** Frosted glass footer with social links, WhatsApp hotline, and back-to-top button.
-6. **Mobile First Experience:**
-   - Floating iOS-style bottom tab bar with haptic spring feel.
+The files use the project prefix /dma/. Map /dma/ to the docs folder in your HTTP server, or make a temporary copy of docs named dma inside a separate preview directory, run python -m http.server 8000 from that parent directory, and open http://localhost:8000/dma/. Opening HTML through file:// is unsupported.
 
----
+## Content
 
-## ⚡ Quick Start
+Course fees and durations are proposed planning figures. Confirm the curriculum, delivery, final fees and certificate recognition before advertising confirmed intakes. The form prepares a WhatsApp enquiry for the visitor to review and send; it does not process payments or store confirmed registrations.
 
-```bash
-# 1. Install dependencies
-npm install
+Website developed by **A.J. Muhris** - [WhatsApp +94 77 555 1712](https://wa.me/94775551712).
 
-# 2. Start development server
-npm run dev
+## Earlier development files
 
-# 3. Compile production build
-npm run build
-
-# 4. Preview production build
-npm run preview
-```
-
----
-
-## 🏢 Academy Information
-
-- **Institution:** Digital MOD Academy (Pvt) Ltd
-- **Founder / Principal:** Mohomed Suhith (B.ICT Hons)
-- **Academic Recognition:** Universal Bureau of Education (UBE)
-- **Physical Campus:** 112 Sungavila, Polonnaruwa, Sri Lanka
-- **WhatsApp Hotline:** +94 74 114 5464 / 074 114 5464
-- **Official Facebook:** [Digitalmod Academy Facebook Page](https://www.facebook.com/people/Digitalmod-Academy-Pvt-Ltd/61573478505246/#)
+The root src, scripts, package.json and framework configuration are preserved from an earlier React/3D prototype. They are not used by the current GitHub Pages deployment. Existing technical guides in docs may describe that prototype; use docs/README.md for the current website.

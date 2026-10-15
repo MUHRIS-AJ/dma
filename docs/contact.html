@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#15120b" />
+    <meta
+      name="description"
+      content="Contact Digitalmod Academy and prepare an enrolment request for your chosen online certificate course."
+    />
+
+    <title>Contact &amp; Enrolment | Digitalmod Academy</title>
+    <!-- Change the absolute domain below when deploying to your own host. -->
+    <link
+      rel="canonical"
+      href="https://muhris-aj.github.io/dma/contact.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Digitalmod Academy" />
+    <meta
+      property="og:title"
+      content="Contact &amp; Enrolment | Digitalmod Academy"
+    />
+    <meta
+      property="og:description"
+      content="Contact Digitalmod Academy and prepare an enrolment request for your chosen online certificate course."
+    />
+    <meta
+      property="og:url"
+      content="https://muhris-aj.github.io/dma/contact.html"
+    />
+    <meta
+      property="og:image"
+      content="https://muhris-aj.github.io/dma/assets/brand-poster.webp"
+    />
+    <meta property="og:image:alt" content="Digitalmod Academy crest" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Set the theme BEFORE CSS paints. Change the dma-theme key only if needed. -->
+    <script>
+      (function () {
+        var r = document.documentElement;
+        r.classList.add("js");
+        try {
+          r.dataset.motion =
+            localStorage.getItem("dma-motion") === "off" ? "off" : "on";
+        } catch (e) {}
+        try {
+          var c = localStorage.getItem("dma-theme") || "system";
+          if (!["system", "light", "dark"].includes(c)) c = "system";
+          r.dataset.themeChoice = c;
+          r.dataset.theme =
+            c === "system"
+              ? matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : c;
+        } catch (e) {
+          r.dataset.themeChoice = "system";
+          r.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        try {
+          if (
+            r.dataset.motion !== "off" &&
+            !sessionStorage.getItem("dma-intro") &&
+            !matchMedia("(prefers-reduced-motion: reduce)").matches
+          ) {
+            r.classList.add("intro-pending");
+            r.dataset.introStarted = performance.now();
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" href="/dma/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/dma/css/style.css" />
+    <link rel="stylesheet" href="/dma/css/animations.css" />
+    <script src="/dma/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Intro failsafe in CSS hides this even if JavaScript cannot finish. -->
+    <div class="intro" data-loader aria-label="Digitalmod Academy introduction">
+      <div class="intro-flash" aria-hidden="true"></div>
+      <div class="intro-content">
+        <img
+          class="intro-logo grow-turn is-in"
+          src="/dma/assets/logo.webp"
+          alt="Digitalmod Academy crest"
+          width="144"
+          height="150"
+        />
+        <p class="intro-name">digitalmod<span>ACADEMY</span></p>
+        <p class="intro-tagline">Your next chapter starts here.</p>
+        <div class="intro-progress" aria-hidden="true"><span></span></div>
+      </div>
+      <button class="intro-skip" type="button" data-skip-intro>
+        Skip introduction <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a
+          class="brand"
+          href="/dma/index.html"
+          data-page
+          aria-label="Digitalmod Academy home"
+        >
+          <img
+            class="brand-logo"
+            src="/dma/assets/logo.webp"
+            alt=""
+            width="42"
+            height="44"
+          />
+          <span>digitalmod<small>ACADEMY</small></span>
+        </a>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="/dma/index.html" data-page>Home</a>
+          <a href="/dma/about.html" data-page>About</a>
+          <a href="/dma/courses.html" data-page>Courses</a>
+          <a href="/dma/contact.html" data-page aria-current="page">Contact</a>
+        </nav>
+        <div class="nav-tools">
+          <label class="theme-control"
+            ><span class="sr-only">Colour theme</span
+            ><span aria-hidden="true">◐</span>
+            <select data-theme-picker aria-label="Colour theme">
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+          <a
+            class="button button-small"
+            href="/dma/contact.html#enrolment"
+            data-page
+            >Enrol now <span aria-hidden="true">↗</span></a
+          >
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Open menu"
+            data-menu-toggle
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" data-page-name="contact">
+      <section class="section page-hero">
+        <div class="container">
+          <div class="eyebrow fly-up" data-animate>
+            LET’S FIND YOUR NEXT STEP
+          </div>
+          <h1 class="page-title fly-up" data-animate>
+            Big future.<br /><span>Small first step.</span>
+          </h1>
+          <p class="page-lead fade" data-animate>
+            Tell us what you want to learn. We’ll help you find your direction.
+          </p>
+          <div class="contact-links">
+            <a
+              class="contact-link glass appear"
+              data-animate
+              href="https://wa.me/94784450088"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span>WHATSAPP THE ACADEMY</span><strong>+94 78 445 0088</strong
+              ><span aria-hidden="true">↗</span></a
+            ><a
+              class="contact-link glass appear"
+              data-animate
+              href="https://www.google.com/maps/search/?api=1&query=Digitalmod+Academy+Sungavila+Polonnaruwa"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span>ROOTED IN SRI LANKA</span
+              ><strong>Sungawila Junction, Polonnaruwa</strong
+              ><span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section section-tight" id="enrolment">
+        <div class="container enrolment-layout">
+          <div
+            class="enrolment-intro fly-up"
+            data-animate
+            data-direction="left"
+          >
+            <div class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</div>
+            <h2>Make it<br /><span>your next move.</span></h2>
+            <p>
+              Found a course that feels like you? Share a few details and take
+              your first step.
+            </p>
+            <ol class="enrolment-steps">
+              <li>
+                <strong>Make it yours.</strong
+                ><span>Choose your course and tell us about yourself.</span>
+              </li>
+              <li>
+                <strong>Check the details.</strong
+                ><span>Review your request before sharing it.</span>
+              </li>
+              <li>
+                <strong>Let’s get you started.</strong
+                ><span>Send it on WhatsApp for the academy to review.</span>
+              </li>
+            </ol>
+            <p class="planning-note">
+              Confirm final fees, class arrangements and certificate recognition
+              before paying.
+            </p>
+          </div>
+          <div
+            class="enrolment-card glass appear"
+            data-animate
+            data-reveal-guard="focus"
+          >
+            <div class="form-card-heading">
+              <span aria-hidden="true">✦</span>
+              <div>
+                <span class="tiny-tag">DIGITALMOD ACADEMY</span>
+                <h2>Enrolment request</h2>
+              </div>
+              <small data-form-stage>01 / YOUR DETAILS</small>
+            </div>
+            <form data-enrolment-form>
+              <label
+                >Choose your course<select name="course" required>
+                  <option value="">Select a certificate course</option>
+                  <optgroup label="Language Courses">
+                    <option
+                      value="english-language"
+                      data-fee="4000"
+                      data-duration="3"
+                    >
+                      Certificate in English Language
+                    </option>
+                    <option
+                      value="spoken-english"
+                      data-fee="4500"
+                      data-duration="3"
+                    >
+                      Certificate in Spoken English
+                    </option>
+                    <option
+                      value="tamil-language"
+                      data-fee="3500"
+                      data-duration="2"
+                    >
+                      Certificate in Tamil Language
+                    </option>
+                    <option
+                      value="sinhala-language"
+                      data-fee="3500"
+                      data-duration="2"
+                    >
+                      Certificate in Sinhala Language
+                    </option>
+                    <option
+                      value="arabic-language"
+                      data-fee="5000"
+                      data-duration="3"
+                    >
+                      Certificate in Arabic Language
+                    </option>
+                    <option
+                      value="english-grammar"
+                      data-fee="3500"
+                      data-duration="2"
+                    >
+                      Certificate in English Grammar
+                    </option>
+                  </optgroup>
+                  <optgroup label="Psychology &amp; Counselling">
+                    <option
+                      value="psychology"
+                      data-fee="7999"
+                      data-duration="3"
+                    >
+                      Certificate in Psychology
+                    </option>
+                    <option
+                      value="psychology-counselling"
+                      data-fee="7999"
+                      data-duration="3"
+                    >
+                      Certificate in Psychology and Counselling
+                    </option>
+                    <option
+                      value="child-psychology"
+                      data-fee="6500"
+                      data-duration="3"
+                    >
+                      Certificate in Child Psychology
+                    </option>
+                    <option
+                      value="educational-psychology"
+                      data-fee="6500"
+                      data-duration="3"
+                    >
+                      Certificate in Educational Psychology
+                    </option>
+                    <option
+                      value="counselling-skills"
+                      data-fee="5500"
+                      data-duration="2"
+                    >
+                      Certificate in Counselling Skills
+                    </option>
+                    <option
+                      value="human-behaviour"
+                      data-fee="5000"
+                      data-duration="2"
+                    >
+                      Certificate in Human Behaviour
+                    </option>
+                  </optgroup>
+                  <optgroup label="HRM &amp; Administration">
+                    <option
+                      value="human-resource-management"
+                      data-fee="7500"
+                      data-duration="3"
+                    >
+                      Certificate in Human Resource Management (HRM)
+                    </option>
+                    <option
+                      value="business-administration"
+                      data-fee="7000"
+                      data-duration="3"
+                    >
+                      Certificate in Business Administration
+                    </option>
+                    <option
+                      value="office-administration"
+                      data-fee="5000"
+                      data-duration="2"
+                    >
+                      Certificate in Office Administration
+                    </option>
+                    <option
+                      value="recruitment-selection"
+                      data-fee="5500"
+                      data-duration="2"
+                    >
+                      Certificate in Recruitment and Selection
+                    </option>
+                    <option
+                      value="leadership-management"
+                      data-fee="6500"
+                      data-duration="3"
+                    >
+                      Certificate in Leadership and Management
+                    </option>
+                  </optgroup>
+                  <optgroup label="Computer &amp; IT">
+                    <option value="ict" data-fee="4000" data-duration="3">
+                      Professional Certificate in ICT
+                    </option>
+                    <option
+                      value="microsoft-office"
+                      data-fee="4500"
+                      data-duration="3"
+                    >
+                      Certificate in Microsoft Office
+                    </option>
+                    <option
+                      value="microsoft-excel"
+                      data-fee="3500"
+                      data-duration="2"
+                    >
+                      Certificate in Microsoft Excel
+                    </option>
+                    <option
+                      value="web-design"
+                      data-fee="7500"
+                      data-duration="3"
+                    >
+                      Certificate in Web Design
+                    </option>
+                    <option
+                      value="computerised-accounting"
+                      data-fee="7500"
+                      data-duration="3"
+                    >
+                      Certificate in Computerised Accounting
+                    </option>
+                  </optgroup>
+                  <optgroup label="Design &amp; Digital Media">
+                    <option
+                      value="graphic-design"
+                      data-fee="4000"
+                      data-duration="3"
+                    >
+                      Certificate in Graphic Design
+                    </option>
+                    <option
+                      value="video-editing"
+                      data-fee="6000"
+                      data-duration="3"
+                    >
+                      Certificate in Video Editing
+                    </option>
+                    <option
+                      value="digital-marketing"
+                      data-fee="6500"
+                      data-duration="3"
+                    >
+                      Certificate in Digital Marketing
+                    </option>
+                    <option
+                      value="social-media-management"
+                      data-fee="5000"
+                      data-duration="2"
+                    >
+                      Certificate in Social Media Management
+                    </option>
+                  </optgroup>
+                  <optgroup label="Business &amp; Professional Skills">
+                    <option
+                      value="entrepreneurship"
+                      data-fee="6500"
+                      data-duration="3"
+                    >
+                      Certificate in Entrepreneurship
+                    </option>
+                    <option
+                      value="project-management"
+                      data-fee="7500"
+                      data-duration="3"
+                    >
+                      Certificate in Project Management
+                    </option>
+                    <option
+                      value="customer-service"
+                      data-fee="4500"
+                      data-duration="2"
+                    >
+                      Certificate in Customer Service
+                    </option>
+                    <option
+                      value="communication-skills"
+                      data-fee="4000"
+                      data-duration="2"
+                    >
+                      Certificate in Communication Skills
+                    </option>
+                  </optgroup>
+                </select></label
+              >
+              <p
+                class="selected-course"
+                data-selected-course
+                aria-live="polite"
+                hidden
+              ></p>
+              <div class="form-grid">
+                <label
+                  >Full name<input
+                    name="name"
+                    autocomplete="name"
+                    required
+                    minlength="2"
+                    maxlength="100"
+                    placeholder="Your full name" /></label
+                ><label
+                  >WhatsApp number<input
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    required
+                    pattern="[+0-9\s\(\)\-]{7,20}"
+                    title="Use 7–20 characters: digits, spaces, +, brackets or hyphens."
+                    placeholder="+94 7X XXX XXXX" /></label
+                ><label
+                  >Email address<input
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                    maxlength="200"
+                    placeholder="you@example.com" /></label
+                ><label
+                  >Residential district<select
+                    name="district"
+                    autocomplete="address-level1"
+                    required
+                  >
+                    <option value="">Select your district</option>
+                    <option>Ampara</option>
+                    <option>Anuradhapura</option>
+                    <option>Badulla</option>
+                    <option>Batticaloa</option>
+                    <option>Colombo</option>
+                    <option>Galle</option>
+                    <option>Gampaha</option>
+                    <option>Hambantota</option>
+                    <option>Jaffna</option>
+                    <option>Kalutara</option>
+                    <option>Kandy</option>
+                    <option>Kegalle</option>
+                    <option>Kilinochchi</option>
+                    <option>Kurunegala</option>
+                    <option>Mannar</option>
+                    <option>Matale</option>
+                    <option>Matara</option>
+                    <option>Monaragala</option>
+                    <option>Mullaitivu</option>
+                    <option>Nuwara Eliya</option>
+                    <option>Polonnaruwa</option>
+                    <option>Puttalam</option>
+                    <option>Ratnapura</option>
+                    <option>Trincomalee</option>
+                    <option>Vavuniya</option>
+                    <option>Outside Sri Lanka</option>
+                  </select></label
+                >
+              </div>
+              <label
+                >Preferred class schedule<select name="schedule" required>
+                  <option value="">Choose a preferred schedule</option>
+                  <option>Weekday evenings</option>
+                  <option>Weekends</option>
+                  <option>Weekday daytime</option>
+                  <option>Discuss with the academy</option>
+                </select></label
+              >
+              <label
+                >Educational qualifications <small>(optional)</small
+                ><input
+                  name="qualifications"
+                  maxlength="200"
+                  placeholder="e.g. G.C.E. O/L, A/L or a diploma"
+              /></label>
+              <label
+                >Anything you’d like us to know? <small>(optional)</small
+                ><textarea
+                  name="notes"
+                  rows="2"
+                  maxlength="700"
+                  placeholder="Your learning goals or questions…"
+                ></textarea>
+              </label>
+              <label class="consent"
+                ><input name="feeConsent" type="checkbox" required /><span
+                  >I understand that fees and availability are proposed, and
+                  enrolment requires academy confirmation.</span
+                ></label
+              ><label class="consent"
+                ><input name="privacyConsent" type="checkbox" required /><span
+                  >I consent to sharing my details with the academy through
+                  WhatsApp for this request.</span
+                ></label
+              ><button class="text-link" type="button" data-open-privacy>
+                Privacy & enrolment terms <span aria-hidden="true">↗</span>
+              </button>
+              <button
+                class="button full-button"
+                type="submit"
+                disabled
+                data-form-submit
+              >
+                Review enrolment request <span aria-hidden="true">↗</span>
+              </button>
+              <p class="form-note">
+                First review your details. Then send your request on WhatsApp.
+              </p>
+              <noscript
+                ><p>
+                  For enrolment, please
+                  <a href="https://wa.me/94784450088"
+                    >contact the academy on WhatsApp</a
+                  >. This form needs JavaScript to prepare a request.
+                </p></noscript
+              >
+            </form>
+            <section
+              class="review-panel"
+              data-form-review
+              hidden
+              aria-labelledby="review-title"
+            >
+              <h3 id="review-title" tabindex="-1">
+                Ready for your next chapter?
+              </h3>
+              <p>Review your details before sharing them with the academy.</p>
+              <dl data-review-details></dl>
+              <p class="review-ready" role="status">
+                Your request is ready. Nothing has been sent yet.
+              </p>
+              <a
+                class="button full-button"
+                data-send-request
+                target="_blank"
+                rel="noopener noreferrer"
+                >Send request on WhatsApp <span aria-hidden="true">↗</span></a
+              ><button type="button" class="text-link" data-edit-request>
+                ← Edit my details
+              </button>
+              <p class="form-note">
+                Send the message in WhatsApp to complete your request.
+                Availability and enrolment need academy confirmation.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section class="section faq-section">
+        <div class="container faq-layout">
+          <div class="fly-up" data-animate>
+            <div class="eyebrow">GOOD QUESTIONS. CLEAR ANSWERS.</div>
+            <h2>
+              Curious?<br /><span>You’re in the<br />right place.</span>
+            </h2>
+          </div>
+          <div class="faq-list fade" data-animate>
+            <details>
+              <summary>
+                <small>01</small>Are courses fully online?<span
+                  aria-hidden="true"
+                  >+</span
+                >
+              </summary>
+              <p>
+                The proposed 30-course range is designed for online learning.
+                Confirm the platform, schedule, teaching language and delivery
+                arrangements for your selected course.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <small>02</small>How much do courses cost?<span
+                  aria-hidden="true"
+                  >+</span
+                >
+              </summary>
+              <p>
+                Proposed fees range from LKR 3,500 to LKR 7,999. Confirm the
+                final fee and any additional charges before registering or
+                paying.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <small>03</small>Will I receive a certificate?<span
+                  aria-hidden="true"
+                  >+</span
+                >
+              </summary>
+              <p>
+                Ask the academy to confirm the issuer, completion and assessment
+                requirements, and recognition for your selected programme.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <small>04</small>Does this form confirm enrolment?<span
+                  aria-hidden="true"
+                  >+</span
+                >
+              </summary>
+              <p>
+                No. It prepares a request for you to send through WhatsApp. The
+                academy must confirm course availability and enrolment
+                arrangements.
+              </p>
+            </details>
+            <details>
+              <summary>
+                <small>05</small>Can I visit the academy?<span
+                  aria-hidden="true"
+                  >+</span
+                >
+              </summary>
+              <p>
+                Contact the academy first to confirm visiting arrangements at
+                Sungawila Junction, Polonnaruwa.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <a class="brand footer-brand" href="/dma/index.html" data-page
+            ><img src="/dma/assets/logo.webp" alt="" width="42" height="44" /><span
+              >digitalmod<small>ACADEMY</small></span
+            ></a
+          >
+          <p>Learn Skills. Build Your Future.</p>
+          <small>Polonnaruwa, Sri Lanka</small>
+        </div>
+        <div class="footer-links">
+          <span>YOUR NEXT CHAPTER</span
+          ><a href="/dma/about.html" data-page>About the academy</a
+          ><a href="/dma/courses.html" data-page>Explore courses</a
+          ><a href="/dma/contact.html#enrolment" data-page>Enrolment form</a
+          ><a href="/dma/contact.html" data-page>Contact us</a>
+        </div>
+        <div class="footer-statement">
+          <span>STAY CURIOUS.</span>
+          <p>
+            There’s always<br />something new<br /><strong>to learn.</strong>
+            <span aria-hidden="true">↗</span>
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year>2026</span> Digitalmod Academy (Pvt) Ltd</span>
+        <div>
+          <button type="button" data-open-privacy>Privacy & terms</button
+          ><button type="button" data-motion-toggle aria-pressed="true">
+            Motion on</button
+          ><a href="#main">Back to top ↑</a>
+        </div>
+      </div>
+      <div class="container developer-credit">
+        <p>
+          Website developed by
+          <a
+            href="https://wa.me/94775551712"
+            target="_blank"
+            rel="noopener noreferrer"
+            >A.J. Muhris <span>+94 77 555 1712</span>
+            <span aria-hidden="true">↗</span></a
+          >
+        </p>
+      </div>
+    </footer>
+    <dialog
+      class="detail-dialog"
+      data-course-dialog
+      aria-labelledby="detail-title"
+    >
+      <div class="detail-panel" data-detail-panel>
+        <button
+          class="dialog-close"
+          data-close-course
+          type="button"
+          aria-label="Close course details"
+        >
+          ×
+        </button>
+        <div class="eyebrow" data-detail-category></div>
+        <h2 id="detail-title" tabindex="-1"></h2>
+        <p data-detail-description></p>
+        <div class="detail-meta" data-detail-meta></div>
+        <p class="small-note">
+          Confirm availability, curriculum, final fees and certificate
+          recognition before enrolling.
+        </p>
+        <a
+          class="button"
+          data-detail-enrol
+          href="/dma/contact.html#enrolment"
+          data-page
+          >Enrolment request <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </dialog>
+    <dialog
+      class="policy-dialog"
+      data-privacy-dialog
+      aria-labelledby="policy-title"
+    >
+      <button
+        class="dialog-close"
+        data-close-privacy
+        type="button"
+        aria-label="Close privacy terms"
+      >
+        ×
+      </button>
+      <div class="eyebrow">PRIVACY & ENROLMENT TERMS</div>
+      <h2 id="policy-title">Your details, clearly handled.</h2>
+      <p>
+        Forms prepare a message for WhatsApp. Your details are kept only in the
+        current page and are not submitted to an academy database. You review
+        the message and choose whether to send it in WhatsApp, where WhatsApp’s
+        privacy terms apply.
+      </p>
+      <p>
+        Only your theme and motion preferences are saved in localStorage. The
+        intro’s session flag uses sessionStorage. No payment is collected here.
+        Confirm course availability, final fees, recognition and refund terms
+        directly with the academy before enrolling.
+      </p>
+      <button type="button" class="button" data-close-privacy>Got it ✓</button>
+    </dialog>
+    <div
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+      data-route-status
+    ></div>
+  </body>
+</html>

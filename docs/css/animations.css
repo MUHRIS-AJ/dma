@@ -1,0 +1,291 @@
+/*
+ * DIGITALMOD — small, dependency-free motion library.
+ *
+ * Usage: <div class="fly-up" data-animate style="--dur: 900ms; --delay: 80ms">
+ * main.js adds .motion-ready to <html>, then toggles .is-in on each element
+ * whenever it enters/leaves the viewport. Remove .is-in to reset an animation;
+ * add it again to replay. All content is visible if JavaScript is unavailable.
+ *
+ * Duration: --dur (default 850ms); delay: --delay (default 0ms).
+ * Easing: --ease. Lists: class="stagger" and child style="--i: 2".
+ * Continuous motion: class="loop is-in", or data-repeat="infinite".
+ * Decorative animation must stay on a wrapper, away from interactive controls.
+ */
+
+/* These variables can also be changed per section or element. */
+.fly-up,
+.fade,
+.appear,
+.grow-turn,
+.bounce,
+.teeter,
+.transparency,
+.wavy,
+.loop {
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stagger [data-animate] {
+  --delay: calc(var(--i, 0) * var(--stagger, 85ms));
+}
+
+/* Hiding requires successful observer setup; .js alone never hides content. */
+.motion-ready [data-animate]:not(.is-in) {
+  opacity: 0;
+}
+
+.motion-ready [data-animate].fly-up:not(.is-in) {
+  transform: translate3d(var(--enter-x, 0px), var(--enter-y, 38px), 0);
+}
+
+.fly-up[data-direction="left"] {
+  --enter-x: -38px;
+  --enter-y: 0px;
+}
+
+.fly-up[data-direction="right"] {
+  --enter-x: 38px;
+  --enter-y: 0px;
+}
+
+.fly-up[data-direction="down"] {
+  --enter-x: 0px;
+  --enter-y: -38px;
+}
+
+.motion-ready [data-animate].appear:not(.is-in) {
+  transform: translateY(12px) scale(0.97);
+}
+
+.motion-ready [data-animate].grow-turn:not(.is-in) {
+  transform: scale(0.88) rotate(-5deg);
+}
+
+.motion-ready [data-animate].bounce:not(.is-in) {
+  transform: translateY(24px);
+}
+
+.is-in:is(
+  .fly-up,
+  .fade,
+  .appear,
+  .grow-turn,
+  .bounce,
+  .teeter,
+  .transparency,
+  .wavy,
+  .loop
+) {
+  opacity: 1;
+  animation-duration: var(--dur, 850ms);
+  animation-delay: var(--delay, 0ms);
+  animation-timing-function: var(--ease, var(--motion-ease));
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+.fly-up.is-in {
+  animation-name: fly-up;
+}
+.fade.is-in {
+  animation-name: fade;
+}
+.appear.is-in {
+  animation-name: appear;
+}
+.grow-turn.is-in {
+  animation-name: grow-turn;
+}
+.bounce.is-in {
+  animation-name: bounce;
+}
+.teeter.is-in {
+  animation-name: teeter;
+}
+.transparency.is-in {
+  animation-name: transparency;
+}
+.wavy.is-in {
+  animation-name: wavy;
+}
+
+/* A loop is deliberately slow and subtle. Override --dur for a faster loop. */
+.loop.is-in {
+  animation-name: loop;
+  animation-duration: var(--dur, 4800ms);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.is-in[data-repeat="infinite"] {
+  animation-iteration-count: infinite;
+}
+
+/* Each named class has its own keyframe, making the library easy to extend. */
+@keyframes fly-up {
+  from {
+    opacity: 0;
+    transform: translate3d(var(--enter-x, 0px), var(--enter-y, 38px), 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes grow-turn {
+  from {
+    opacity: 0;
+    transform: scale(0.88) rotate(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  48% {
+    opacity: 1;
+    transform: translateY(-8px);
+  }
+  70% {
+    transform: translateY(3px);
+  }
+  86% {
+    transform: translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes teeter {
+  0% {
+    opacity: 0;
+    transform: rotate(-3deg);
+  }
+  30% {
+    opacity: 1;
+    transform: rotate(2deg);
+  }
+  58% {
+    transform: rotate(-1.5deg);
+  }
+  80% {
+    transform: rotate(0.7deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+@keyframes transparency {
+  0% {
+    opacity: 0.3;
+  }
+  35% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes wavy {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) rotate(-1deg);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-5px) rotate(0.8deg);
+  }
+  60% {
+    transform: translateY(3px) rotate(-0.5deg);
+  }
+  80% {
+    transform: translateY(-2px) rotate(0.3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes loop {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    opacity: 0.86;
+    transform: translateY(-6px) rotate(0.5deg);
+  }
+}
+
+/* A reset must never hide something the visitor is currently using. */
+.motion-ready [data-animate]:focus-within {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+/* The manual motion setting and OS preference also cover other site effects. */
+html[data-motion="off"] *,
+html[data-motion="off"] *::before,
+html[data-motion="off"] *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+html[data-motion="off"] [data-animate] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .motion-ready [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

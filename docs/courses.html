@@ -1,0 +1,1610 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#15120b" />
+    <meta
+      name="description"
+      content="Browse 30 proposed online certificate courses, compare durations and planning fees, and find your next learning pathway."
+    />
+
+    <title>Online Certificate Courses | Digitalmod Academy</title>
+    <!-- Change the absolute domain below when deploying to your own host. -->
+    <link
+      rel="canonical"
+      href="https://muhris-aj.github.io/dma/courses.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Digitalmod Academy" />
+    <meta
+      property="og:title"
+      content="Online Certificate Courses | Digitalmod Academy"
+    />
+    <meta
+      property="og:description"
+      content="Browse 30 proposed online certificate courses, compare durations and planning fees, and find your next learning pathway."
+    />
+    <meta
+      property="og:url"
+      content="https://muhris-aj.github.io/dma/courses.html"
+    />
+    <meta
+      property="og:image"
+      content="https://muhris-aj.github.io/dma/assets/brand-poster.webp"
+    />
+    <meta property="og:image:alt" content="Digitalmod Academy crest" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Set the theme BEFORE CSS paints. Change the dma-theme key only if needed. -->
+    <script>
+      (function () {
+        var r = document.documentElement;
+        r.classList.add("js");
+        try {
+          r.dataset.motion =
+            localStorage.getItem("dma-motion") === "off" ? "off" : "on";
+        } catch (e) {}
+        try {
+          var c = localStorage.getItem("dma-theme") || "system";
+          if (!["system", "light", "dark"].includes(c)) c = "system";
+          r.dataset.themeChoice = c;
+          r.dataset.theme =
+            c === "system"
+              ? matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : c;
+        } catch (e) {
+          r.dataset.themeChoice = "system";
+          r.dataset.theme = matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        try {
+          if (
+            r.dataset.motion !== "off" &&
+            !sessionStorage.getItem("dma-intro") &&
+            !matchMedia("(prefers-reduced-motion: reduce)").matches
+          ) {
+            r.classList.add("intro-pending");
+            r.dataset.introStarted = performance.now();
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" href="/dma/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/dma/css/style.css" />
+    <link rel="stylesheet" href="/dma/css/animations.css" />
+    <script src="/dma/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <!-- Intro failsafe in CSS hides this even if JavaScript cannot finish. -->
+    <div class="intro" data-loader aria-label="Digitalmod Academy introduction">
+      <div class="intro-flash" aria-hidden="true"></div>
+      <div class="intro-content">
+        <img
+          class="intro-logo grow-turn is-in"
+          src="/dma/assets/logo.webp"
+          alt="Digitalmod Academy crest"
+          width="144"
+          height="150"
+        />
+        <p class="intro-name">digitalmod<span>ACADEMY</span></p>
+        <p class="intro-tagline">Your next chapter starts here.</p>
+        <div class="intro-progress" aria-hidden="true"><span></span></div>
+      </div>
+      <button class="intro-skip" type="button" data-skip-intro>
+        Skip introduction <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container nav-row">
+        <a
+          class="brand"
+          href="/dma/index.html"
+          data-page
+          aria-label="Digitalmod Academy home"
+        >
+          <img
+            class="brand-logo"
+            src="/dma/assets/logo.webp"
+            alt=""
+            width="42"
+            height="44"
+          />
+          <span>digitalmod<small>ACADEMY</small></span>
+        </a>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="/dma/index.html" data-page>Home</a>
+          <a href="/dma/about.html" data-page>About</a>
+          <a href="/dma/courses.html" data-page aria-current="page">Courses</a>
+          <a href="/dma/contact.html" data-page>Contact</a>
+        </nav>
+        <div class="nav-tools">
+          <label class="theme-control"
+            ><span class="sr-only">Colour theme</span
+            ><span aria-hidden="true">◐</span>
+            <select data-theme-picker aria-label="Colour theme">
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+          <a
+            class="button button-small"
+            href="/dma/contact.html#enrolment"
+            data-page
+            >Enrol now <span aria-hidden="true">↗</span></a
+          >
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-controls="main-nav"
+            aria-expanded="false"
+            aria-label="Open menu"
+            data-menu-toggle
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" data-page-name="courses">
+      <section class="section page-hero">
+        <div class="container">
+          <div class="eyebrow fly-up" data-animate>
+            30 PROPOSED ONLINE CERTIFICATE COURSES
+          </div>
+          <h1 class="page-title fly-up" data-animate>
+            Find your next<br /><span>superpower.</span>
+          </h1>
+          <p class="page-lead fade" data-animate>
+            Six pathways. A world of possibilities. Find the subject that moves
+            you forward.
+          </p>
+        </div>
+      </section>
+      <section class="section section-tight" id="catalogue">
+        <div class="container">
+          <div class="course-controls" data-course-controls>
+            <div
+              class="category-filters"
+              role="group"
+              aria-label="Filter courses by subject"
+            >
+              <button
+                type="button"
+                data-category-filter="all"
+                aria-pressed="true"
+              >
+                All courses <span>30</span></button
+              ><button
+                type="button"
+                data-category-filter="language"
+                aria-pressed="false"
+              >
+                Languages</button
+              ><button
+                type="button"
+                data-category-filter="psychology"
+                aria-pressed="false"
+              >
+                Psychology</button
+              ><button
+                type="button"
+                data-category-filter="hrm"
+                aria-pressed="false"
+              >
+                HR &amp; Administration</button
+              ><button
+                type="button"
+                data-category-filter="it"
+                aria-pressed="false"
+              >
+                Computer &amp; IT</button
+              ><button
+                type="button"
+                data-category-filter="design"
+                aria-pressed="false"
+              >
+                Design &amp; Media</button
+              ><button
+                type="button"
+                data-category-filter="business"
+                aria-pressed="false"
+              >
+                Business
+              </button>
+            </div>
+            <div class="course-toolbar">
+              <label class="course-search"
+                >⌕ <span class="sr-only">Search courses</span
+                ><input
+                  type="search"
+                  placeholder="What would you like to learn?"
+                  data-course-search
+                  aria-label="Search courses" /></label
+              ><label class="course-sort"
+                ><span class="sr-only">Sort courses</span
+                ><select data-course-sort aria-label="Sort courses">
+                  <option value="featured">Featured first</option>
+                  <option value="fee">Fee: low to high</option>
+                  <option value="duration">Shortest duration</option>
+                </select></label
+              >
+            </div>
+          </div>
+          <p
+            class="course-results"
+            role="status"
+            aria-live="polite"
+            data-course-results
+          >
+            30 proposed courses · Fully online
+          </p>
+          <div class="course-grid stagger" data-course-grid data-stagger="60">
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="ict"
+              data-title="Professional Certificate in ICT"
+              data-category="it"
+              data-duration="3"
+              data-fee="4000"
+              style="--i: 0"
+            >
+              <div class="course-art art-it" aria-hidden="true">
+                <span class="course-category">Computer &amp; IT</span
+                ><span class="course-glyph">&lt;/&gt;</span
+                ><span class="course-art-glass">&lt;/&gt;</span
+                ><span class="course-orbit"></span><small>18</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">PROFESSIONAL CERTIFICATE</span>
+                <h3>ICT</h3>
+                <p class="course-description">
+                  Build your digital confidence and explore the essentials of
+                  information technology.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 4,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=ict#enrolment"
+                    data-course-open
+                    aria-label="View Professional Certificate in ICT"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="graphic-design"
+              data-title="Certificate in Graphic Design"
+              data-category="design"
+              data-duration="3"
+              data-fee="4000"
+              style="--i: 1"
+            >
+              <div class="course-art art-design" aria-hidden="true">
+                <span class="course-category">Design &amp; Media</span
+                ><span class="course-glyph">✳</span
+                ><span class="course-art-glass">✳</span
+                ><span class="course-orbit"></span><small>23</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Graphic Design</h3>
+                <p class="course-description">
+                  Turn your creative curiosity into a new perspective on visual
+                  communication.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 4,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=graphic-design#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Graphic Design"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="english-language"
+              data-title="Certificate in English Language"
+              data-category="language"
+              data-duration="3"
+              data-fee="4000"
+              style="--i: 2"
+            >
+              <div class="course-art art-language" aria-hidden="true">
+                <span class="course-category">Languages</span
+                ><span class="course-glyph">Aa</span
+                ><span class="course-art-glass">Aa</span
+                ><span class="course-orbit"></span><small>01</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>English Language</h3>
+                <p class="course-description">
+                  Build confidence in everyday English and discover more ways to
+                  express yourself.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 4,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=english-language#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in English Language"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="psychology"
+              data-title="Certificate in Psychology"
+              data-category="psychology"
+              data-duration="3"
+              data-fee="7999"
+              style="--i: 3"
+            >
+              <div class="course-art art-psychology" aria-hidden="true">
+                <span class="course-category">Psychology</span
+                ><span class="course-glyph">Ψ</span
+                ><span class="course-art-glass">Ψ</span
+                ><span class="course-orbit"></span><small>07</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Psychology</h3>
+                <p class="course-description">
+                  Explore how people think, feel and behave, with a fresh
+                  perspective on the mind.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 7,999</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=psychology#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Psychology"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="human-resource-management"
+              data-title="Certificate in Human Resource Management (HRM)"
+              data-category="hrm"
+              data-duration="3"
+              data-fee="7500"
+              style="--i: 4"
+            >
+              <div class="course-art art-hrm" aria-hidden="true">
+                <span class="course-category">HR &amp; Administration</span
+                ><span class="course-glyph">HR</span
+                ><span class="course-art-glass">HR</span
+                ><span class="course-orbit"></span><small>13</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Human Resource Management (HRM)</h3>
+                <p class="course-description">
+                  Explore the people side of organisations and the foundations
+                  of HR practice.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 7,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=human-resource-management#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Human Resource Management (HRM)"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="entrepreneurship"
+              data-title="Certificate in Entrepreneurship"
+              data-category="business"
+              data-duration="3"
+              data-fee="6500"
+              style="--i: 5"
+            >
+              <div class="course-art art-business" aria-hidden="true">
+                <span class="course-category">Business</span
+                ><span class="course-glyph">↗</span
+                ><span class="course-art-glass">↗</span
+                ><span class="course-orbit"></span><small>27</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Entrepreneurship</h3>
+                <p class="course-description">
+                  Explore the journey from a promising idea to a business with
+                  purpose.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 6,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=entrepreneurship#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Entrepreneurship"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="spoken-english"
+              data-title="Certificate in Spoken English"
+              data-category="language"
+              data-duration="3"
+              data-fee="4500"
+              style="--i: 6"
+            >
+              <div class="course-art art-language" aria-hidden="true">
+                <span class="course-category">Languages</span
+                ><span class="course-glyph">Aa</span
+                ><span class="course-art-glass">Aa</span
+                ><span class="course-orbit"></span><small>02</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Spoken English</h3>
+                <p class="course-description">
+                  Explore conversational English for everyday, study and
+                  professional settings.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 4,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=spoken-english#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Spoken English"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="tamil-language"
+              data-title="Certificate in Tamil Language"
+              data-category="language"
+              data-duration="2"
+              data-fee="3500"
+              style="--i: 7"
+            >
+              <div class="course-art art-language" aria-hidden="true">
+                <span class="course-category">Languages</span
+                ><span class="course-glyph">Aa</span
+                ><span class="course-art-glass">Aa</span
+                ><span class="course-orbit"></span><small>03</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Tamil Language</h3>
+                <p class="course-description">
+                  Take your first steps in Tamil and connect through everyday
+                  communication.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 3,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=tamil-language#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Tamil Language"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="sinhala-language"
+              data-title="Certificate in Sinhala Language"
+              data-category="language"
+              data-duration="2"
+              data-fee="3500"
+              style="--i: 8"
+            >
+              <div class="course-art art-language" aria-hidden="true">
+                <span class="course-category">Languages</span
+                ><span class="course-glyph">Aa</span
+                ><span class="course-art-glass">Aa</span
+                ><span class="course-orbit"></span><small>04</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Sinhala Language</h3>
+                <p class="course-description">
+                  Explore the foundations of Sinhala for everyday conversations
+                  and connection.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 3,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=sinhala-language#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Sinhala Language"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="arabic-language"
+              data-title="Certificate in Arabic Language"
+              data-category="language"
+              data-duration="3"
+              data-fee="5000"
+              style="--i: 9"
+            >
+              <div class="course-art art-language" aria-hidden="true">
+                <span class="course-category">Languages</span
+                ><span class="course-glyph">Aa</span
+                ><span class="course-art-glass">Aa</span
+                ><span class="course-orbit"></span><small>05</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Arabic Language</h3>
+                <p class="course-description">
+                  Start exploring Arabic language and the building blocks of
+                  communication.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 5,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=arabic-language#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Arabic Language"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="english-grammar"
+              data-title="Certificate in English Grammar"
+              data-category="language"
+              data-duration="2"
+              data-fee="3500"
+              style="--i: 10"
+            >
+              <div class="course-art art-language" aria-hidden="true">
+                <span class="course-category">Languages</span
+                ><span class="course-glyph">Aa</span
+                ><span class="course-art-glass">Aa</span
+                ><span class="course-orbit"></span><small>06</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>English Grammar</h3>
+                <p class="course-description">
+                  Develop a clearer understanding of English structure and
+                  written expression.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 3,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=english-grammar#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in English Grammar"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="psychology-counselling"
+              data-title="Certificate in Psychology and Counselling"
+              data-category="psychology"
+              data-duration="3"
+              data-fee="7999"
+              style="--i: 11"
+            >
+              <div class="course-art art-psychology" aria-hidden="true">
+                <span class="course-category">Psychology</span
+                ><span class="course-glyph">Ψ</span
+                ><span class="course-art-glass">Ψ</span
+                ><span class="course-orbit"></span><small>08</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Psychology and Counselling</h3>
+                <p class="course-description">
+                  Discover the connections between human behaviour, listening
+                  and support.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 7,999</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=psychology-counselling#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Psychology and Counselling"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="child-psychology"
+              data-title="Certificate in Child Psychology"
+              data-category="psychology"
+              data-duration="3"
+              data-fee="6500"
+              style="--i: 12"
+            >
+              <div class="course-art art-psychology" aria-hidden="true">
+                <span class="course-category">Psychology</span
+                ><span class="course-glyph">Ψ</span
+                ><span class="course-art-glass">Ψ</span
+                ><span class="course-orbit"></span><small>09</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Child Psychology</h3>
+                <p class="course-description">
+                  Explore ideas around childhood development, learning and
+                  emotional wellbeing.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 6,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=child-psychology#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Child Psychology"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="educational-psychology"
+              data-title="Certificate in Educational Psychology"
+              data-category="psychology"
+              data-duration="3"
+              data-fee="6500"
+              style="--i: 13"
+            >
+              <div class="course-art art-psychology" aria-hidden="true">
+                <span class="course-category">Psychology</span
+                ><span class="course-glyph">Ψ</span
+                ><span class="course-art-glass">Ψ</span
+                ><span class="course-orbit"></span><small>10</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Educational Psychology</h3>
+                <p class="course-description">
+                  Discover the relationship between the mind, learning and
+                  education.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 6,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=educational-psychology#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Educational Psychology"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="counselling-skills"
+              data-title="Certificate in Counselling Skills"
+              data-category="psychology"
+              data-duration="2"
+              data-fee="5500"
+              style="--i: 14"
+            >
+              <div class="course-art art-psychology" aria-hidden="true">
+                <span class="course-category">Psychology</span
+                ><span class="course-glyph">Ψ</span
+                ><span class="course-art-glass">Ψ</span
+                ><span class="course-orbit"></span><small>11</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Counselling Skills</h3>
+                <p class="course-description">
+                  Explore supportive communication, attentive listening and
+                  human connection.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 5,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=counselling-skills#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Counselling Skills"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="human-behaviour"
+              data-title="Certificate in Human Behaviour"
+              data-category="psychology"
+              data-duration="2"
+              data-fee="5000"
+              style="--i: 15"
+            >
+              <div class="course-art art-psychology" aria-hidden="true">
+                <span class="course-category">Psychology</span
+                ><span class="course-glyph">Ψ</span
+                ><span class="course-art-glass">Ψ</span
+                ><span class="course-orbit"></span><small>12</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Human Behaviour</h3>
+                <p class="course-description">
+                  Get curious about the influences behind everyday human choices
+                  and actions.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 5,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=human-behaviour#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Human Behaviour"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="business-administration"
+              data-title="Certificate in Business Administration"
+              data-category="hrm"
+              data-duration="3"
+              data-fee="7000"
+              style="--i: 16"
+            >
+              <div class="course-art art-hrm" aria-hidden="true">
+                <span class="course-category">HR &amp; Administration</span
+                ><span class="course-glyph">HR</span
+                ><span class="course-art-glass">HR</span
+                ><span class="course-orbit"></span><small>14</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Business Administration</h3>
+                <p class="course-description">
+                  Discover the foundations of organising, managing and
+                  supporting a business.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 7,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=business-administration#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Business Administration"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="office-administration"
+              data-title="Certificate in Office Administration"
+              data-category="hrm"
+              data-duration="2"
+              data-fee="5000"
+              style="--i: 17"
+            >
+              <div class="course-art art-hrm" aria-hidden="true">
+                <span class="course-category">HR &amp; Administration</span
+                ><span class="course-glyph">HR</span
+                ><span class="course-art-glass">HR</span
+                ><span class="course-orbit"></span><small>15</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Office Administration</h3>
+                <p class="course-description">
+                  Explore the practical skills that help an office run smoothly.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 5,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=office-administration#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Office Administration"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="recruitment-selection"
+              data-title="Certificate in Recruitment and Selection"
+              data-category="hrm"
+              data-duration="2"
+              data-fee="5500"
+              style="--i: 18"
+            >
+              <div class="course-art art-hrm" aria-hidden="true">
+                <span class="course-category">HR &amp; Administration</span
+                ><span class="course-glyph">HR</span
+                ><span class="course-art-glass">HR</span
+                ><span class="course-orbit"></span><small>16</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Recruitment and Selection</h3>
+                <p class="course-description">
+                  Discover how organisations approach finding and selecting the
+                  right people.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 5,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=recruitment-selection#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Recruitment and Selection"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="leadership-management"
+              data-title="Certificate in Leadership and Management"
+              data-category="hrm"
+              data-duration="3"
+              data-fee="6500"
+              style="--i: 19"
+            >
+              <div class="course-art art-hrm" aria-hidden="true">
+                <span class="course-category">HR &amp; Administration</span
+                ><span class="course-glyph">HR</span
+                ><span class="course-art-glass">HR</span
+                ><span class="course-orbit"></span><small>17</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Leadership and Management</h3>
+                <p class="course-description">
+                  Explore the foundations of leading people and managing shared
+                  goals.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 6,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=leadership-management#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Leadership and Management"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="microsoft-office"
+              data-title="Certificate in Microsoft Office"
+              data-category="it"
+              data-duration="3"
+              data-fee="4500"
+              style="--i: 20"
+            >
+              <div class="course-art art-it" aria-hidden="true">
+                <span class="course-category">Computer &amp; IT</span
+                ><span class="course-glyph">&lt;/&gt;</span
+                ><span class="course-art-glass">&lt;/&gt;</span
+                ><span class="course-orbit"></span><small>19</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Microsoft Office</h3>
+                <p class="course-description">
+                  Explore familiar productivity tools for documents,
+                  presentations and everyday work.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 4,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=microsoft-office#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Microsoft Office"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="microsoft-excel"
+              data-title="Certificate in Microsoft Excel"
+              data-category="it"
+              data-duration="2"
+              data-fee="3500"
+              style="--i: 21"
+            >
+              <div class="course-art art-it" aria-hidden="true">
+                <span class="course-category">Computer &amp; IT</span
+                ><span class="course-glyph">&lt;/&gt;</span
+                ><span class="course-art-glass">&lt;/&gt;</span
+                ><span class="course-orbit"></span><small>20</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Microsoft Excel</h3>
+                <p class="course-description">
+                  Discover how spreadsheets can organise information and support
+                  better decisions.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 3,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=microsoft-excel#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Microsoft Excel"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="web-design"
+              data-title="Certificate in Web Design"
+              data-category="it"
+              data-duration="3"
+              data-fee="7500"
+              style="--i: 22"
+            >
+              <div class="course-art art-it" aria-hidden="true">
+                <span class="course-category">Computer &amp; IT</span
+                ><span class="course-glyph">&lt;/&gt;</span
+                ><span class="course-art-glass">&lt;/&gt;</span
+                ><span class="course-orbit"></span><small>21</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Web Design</h3>
+                <p class="course-description">
+                  Explore how thoughtful design turns ideas into useful digital
+                  experiences.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 7,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=web-design#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Web Design"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="computerised-accounting"
+              data-title="Certificate in Computerised Accounting"
+              data-category="it"
+              data-duration="3"
+              data-fee="7500"
+              style="--i: 23"
+            >
+              <div class="course-art art-it" aria-hidden="true">
+                <span class="course-category">Computer &amp; IT</span
+                ><span class="course-glyph">&lt;/&gt;</span
+                ><span class="course-art-glass">&lt;/&gt;</span
+                ><span class="course-orbit"></span><small>22</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Computerised Accounting</h3>
+                <p class="course-description">
+                  Explore the connection between accounting processes and
+                  digital tools.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 7,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=computerised-accounting#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Computerised Accounting"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="video-editing"
+              data-title="Certificate in Video Editing"
+              data-category="design"
+              data-duration="3"
+              data-fee="6000"
+              style="--i: 24"
+            >
+              <div class="course-art art-design" aria-hidden="true">
+                <span class="course-category">Design &amp; Media</span
+                ><span class="course-glyph">✳</span
+                ><span class="course-art-glass">✳</span
+                ><span class="course-orbit"></span><small>24</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Video Editing</h3>
+                <p class="course-description">
+                  Explore the art of bringing footage, sound and stories
+                  together.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 6,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=video-editing#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Video Editing"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="digital-marketing"
+              data-title="Certificate in Digital Marketing"
+              data-category="design"
+              data-duration="3"
+              data-fee="6500"
+              style="--i: 25"
+            >
+              <div class="course-art art-design" aria-hidden="true">
+                <span class="course-category">Design &amp; Media</span
+                ><span class="course-glyph">✳</span
+                ><span class="course-art-glass">✳</span
+                ><span class="course-orbit"></span><small>25</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Digital Marketing</h3>
+                <p class="course-description">
+                  Discover how brands connect with people through digital
+                  channels.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 6,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=digital-marketing#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Digital Marketing"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="social-media-management"
+              data-title="Certificate in Social Media Management"
+              data-category="design"
+              data-duration="2"
+              data-fee="5000"
+              style="--i: 26"
+            >
+              <div class="course-art art-design" aria-hidden="true">
+                <span class="course-category">Design &amp; Media</span
+                ><span class="course-glyph">✳</span
+                ><span class="course-art-glass">✳</span
+                ><span class="course-orbit"></span><small>26</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Social Media Management</h3>
+                <p class="course-description">
+                  Explore thoughtful content, online communities and a
+                  consistent social presence.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 5,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=social-media-management#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Social Media Management"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="project-management"
+              data-title="Certificate in Project Management"
+              data-category="business"
+              data-duration="3"
+              data-fee="7500"
+              style="--i: 27"
+            >
+              <div class="course-art art-business" aria-hidden="true">
+                <span class="course-category">Business</span
+                ><span class="course-glyph">↗</span
+                ><span class="course-art-glass">↗</span
+                ><span class="course-orbit"></span><small>28</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Project Management</h3>
+                <p class="course-description">
+                  Discover how ideas become organised projects with clear goals.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 3 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 7,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=project-management#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Project Management"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="customer-service"
+              data-title="Certificate in Customer Service"
+              data-category="business"
+              data-duration="2"
+              data-fee="4500"
+              style="--i: 28"
+            >
+              <div class="course-art art-business" aria-hidden="true">
+                <span class="course-category">Business</span
+                ><span class="course-glyph">↗</span
+                ><span class="course-art-glass">↗</span
+                ><span class="course-orbit"></span><small>29</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Customer Service</h3>
+                <p class="course-description">
+                  Explore the communication and care behind positive customer
+                  experiences.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 4,500</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=customer-service#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Customer Service"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="course-card glass appear"
+              data-animate
+              data-course-id="communication-skills"
+              data-title="Certificate in Communication Skills"
+              data-category="business"
+              data-duration="2"
+              data-fee="4000"
+              style="--i: 29"
+            >
+              <div class="course-art art-business" aria-hidden="true">
+                <span class="course-category">Business</span
+                ><span class="course-glyph">↗</span
+                ><span class="course-art-glass">↗</span
+                ><span class="course-orbit"></span><small>30</small>
+              </div>
+              <div class="course-body">
+                <span class="tiny-tag">CERTIFICATE COURSE</span>
+                <h3>Communication Skills</h3>
+                <p class="course-description">
+                  Develop your perspective on expressing ideas and connecting
+                  with others.
+                </p>
+                <div class="course-meta">
+                  <span>◷ 2 months</span><span>◎ Online</span>
+                </div>
+                <div class="course-bottom">
+                  <span
+                    ><small>PROPOSED COURSE FEE</small
+                    ><strong><small>LKR</small> 4,000</strong></span
+                  ><a
+                    class="circle-link"
+                    href="/dma/contact.html?course=communication-skills#enrolment"
+                    data-course-open
+                    aria-label="View Certificate in Communication Skills"
+                    ><span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="empty-state glass" data-course-empty hidden>
+            <h2>A different search might open a new door.</h2>
+            <p>Try English, design, psychology or business.</p>
+            <button
+              class="button button-outline"
+              type="button"
+              data-reset-filters
+            >
+              Reset filters ↻
+            </button>
+          </div>
+          <div class="center">
+            <button
+              type="button"
+              class="button button-outline"
+              data-show-all
+              hidden
+            >
+              Explore all 30 courses ↓
+            </button>
+          </div>
+          <p class="planning-note">
+            <strong>A little clarity before you begin.</strong> Durations and
+            fees are proposed for planning. Confirm the curriculum, delivery
+            arrangements and certificate recognition with the academy before
+            enrolling.
+          </p>
+          <noscript
+            ><p>
+              All 30 courses are shown. Enable JavaScript for search, filters
+              and detail morphs.
+            </p></noscript
+          >
+        </div>
+      </section>
+      <section class="section">
+        <div class="container cta-panel glass fly-up" data-animate>
+          <div>
+            <div class="eyebrow">NOT SURE WHERE TO START?</div>
+            <h2>A conversation<br /><span>can open a door.</span></h2>
+          </div>
+          <a class="button" href="/dma/contact.html" data-page
+            >Talk to the academy <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <a class="brand footer-brand" href="/dma/index.html" data-page
+            ><img src="/dma/assets/logo.webp" alt="" width="42" height="44" /><span
+              >digitalmod<small>ACADEMY</small></span
+            ></a
+          >
+          <p>Learn Skills. Build Your Future.</p>
+          <small>Polonnaruwa, Sri Lanka</small>
+        </div>
+        <div class="footer-links">
+          <span>YOUR NEXT CHAPTER</span
+          ><a href="/dma/about.html" data-page>About the academy</a
+          ><a href="/dma/courses.html" data-page>Explore courses</a
+          ><a href="/dma/contact.html#enrolment" data-page>Enrolment form</a
+          ><a href="/dma/contact.html" data-page>Contact us</a>
+        </div>
+        <div class="footer-statement">
+          <span>STAY CURIOUS.</span>
+          <p>
+            There’s always<br />something new<br /><strong>to learn.</strong>
+            <span aria-hidden="true">↗</span>
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year>2026</span> Digitalmod Academy (Pvt) Ltd</span>
+        <div>
+          <button type="button" data-open-privacy>Privacy & terms</button
+          ><button type="button" data-motion-toggle aria-pressed="true">
+            Motion on</button
+          ><a href="#main">Back to top ↑</a>
+        </div>
+      </div>
+      <div class="container developer-credit">
+        <p>
+          Website developed by
+          <a
+            href="https://wa.me/94775551712"
+            target="_blank"
+            rel="noopener noreferrer"
+            >A.J. Muhris <span>+94 77 555 1712</span>
+            <span aria-hidden="true">↗</span></a
+          >
+        </p>
+      </div>
+    </footer>
+    <dialog
+      class="detail-dialog"
+      data-course-dialog
+      aria-labelledby="detail-title"
+    >
+      <div class="detail-panel" data-detail-panel>
+        <button
+          class="dialog-close"
+          data-close-course
+          type="button"
+          aria-label="Close course details"
+        >
+          ×
+        </button>
+        <div class="eyebrow" data-detail-category></div>
+        <h2 id="detail-title" tabindex="-1"></h2>
+        <p data-detail-description></p>
+        <div class="detail-meta" data-detail-meta></div>
+        <p class="small-note">
+          Confirm availability, curriculum, final fees and certificate
+          recognition before enrolling.
+        </p>
+        <a
+          class="button"
+          data-detail-enrol
+          href="/dma/contact.html#enrolment"
+          data-page
+          >Enrolment request <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </dialog>
+    <dialog
+      class="policy-dialog"
+      data-privacy-dialog
+      aria-labelledby="policy-title"
+    >
+      <button
+        class="dialog-close"
+        data-close-privacy
+        type="button"
+        aria-label="Close privacy terms"
+      >
+        ×
+      </button>
+      <div class="eyebrow">PRIVACY & ENROLMENT TERMS</div>
+      <h2 id="policy-title">Your details, clearly handled.</h2>
+      <p>
+        Forms prepare a message for WhatsApp. Your details are kept only in the
+        current page and are not submitted to an academy database. You review
+        the message and choose whether to send it in WhatsApp, where WhatsApp’s
+        privacy terms apply.
+      </p>
+      <p>
+        Only your theme and motion preferences are saved in localStorage. The
+        intro’s session flag uses sessionStorage. No payment is collected here.
+        Confirm course availability, final fees, recognition and refund terms
+        directly with the academy before enrolling.
+      </p>
+      <button type="button" class="button" data-close-privacy>Got it ✓</button>
+    </dialog>
+    <div
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+      data-route-status
+    ></div>
+  </body>
+</html>
